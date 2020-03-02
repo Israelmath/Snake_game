@@ -22,7 +22,7 @@ snake_skin.fill((255, 255, 255))
 food = pygame.Surface((10, 10))
 food.fill((255, 0, 0))
 
-dificuldade = 10
+dificuldade = 20
 
 
 def posicao_no_grid():
@@ -64,13 +64,12 @@ def saiu_do_grid(posicao):
         return False
 
 
-
 food_posicao = tuple(posicao_no_grid())
 clock = pygame.time.Clock()
 
 while True:
 
-    clock.tick(dificuldade)
+    clock.tick(dificuldade/2)
 
     for event in pygame.event.get():
         if event.type == KEYDOWN:
